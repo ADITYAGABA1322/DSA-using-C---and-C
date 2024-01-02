@@ -1,0 +1,1 @@
+{"name":"Local: treeNode","url":"/Users/adityagaba/Downloads/DSA using C++/treeNode.cpp","tests":[{"id":1662467522158,"input":"1 3 2  3 4 2 5 6 2 7 8 0 0 0 0 1 9 0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/adityagaba/Downloads/DSA using C++/treeNode.cpp","group":"local","local":true}
