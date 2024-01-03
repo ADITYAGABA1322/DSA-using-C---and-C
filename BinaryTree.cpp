@@ -83,7 +83,7 @@ void printTree(BinaryTreeNode<int> *root)
 BinaryTreeNode<int> *takeInput()
 {
     int rootData;
-    cout << "Enter data: ";
+    cout << "Enter root data: ";
     cin >> rootData;
     if (rootData == -1)
     {
@@ -152,8 +152,6 @@ BinaryTreeNode<int> *buildTreeHelper(int *in, int *pre, int inS, int inE, int pr
     // int rInS = rootIndex + 1;
     // int rInE = inE;
 
-  
-
     BinaryTreeNode<int> *root = new BinaryTreeNode<int>(rootData);
     root->left = buildTreeHelper(in, pre, lInS, lInE, lPreS, lPreE);
     root->right = buildTreeHelper(in, pre, rInS, rInE, rPreS, rPreE);
@@ -217,11 +215,11 @@ int main()
 
     // BinaryTreeNode<int> *root=takeInputLevelWise();
 
-    // int in[] = {4, 2, 5, 1, 8, 6, 9, 3, 7};
-    // int pre[] = {1, 2, 4, 5, 3, 6, 8, 9, 7};
-    // BinaryTreeNode<int> *root = buildTree(in, pre, 9);
+    // int in[] = {4, 2, 1, 7, 5, 8, 3, 6};
+    // int pre[] = {1, 2, 4, 3, 5, 7, 8, 6};
+    // BinaryTreeNode<int> *root = buildTree(in, pre, 8);
 
-    BinaryTreeNode<int> *root = takeInputLevelWise();
+    BinaryTreeNode<int> *root = takeInput();
 
     printTree(root);
     cout << "Number of nodes: " << numNodes(root) << endl;
@@ -238,4 +236,4 @@ int main()
 // 1 2 3 4 5 6 7 -1 -1 -1 -1 8 9 -1 -1 -1 -1 -1 -1
 // 1 2 3 4 5 -1 -1  6 -1 -1 7 8 -1 -1 9 -1 -1 -1 -1
 
-
+// for using recursion we use this input : 1 2 4 -1 -1 5 -1 -1 3 6 -1 -1 7 -1 -1

@@ -24,23 +24,24 @@ using namespace std;
 
 // };
 
-template<typename T>
+template <typename T>
 
-class TreeNode{
-    public:
+class TreeNode
+{
+public:
     T data;
-    vector<TreeNode<T>*> children;
-    TreeNode(T data){
-        this->data=data;
+    vector<TreeNode<T> *> children;
+    TreeNode(T data)
+    {
+        this->data = data;
     }
-    ~TreeNode(){
+    ~TreeNode()
+    {
         for (int i = 0; i < children.size(); i++)
         {
             delete children[i];
         }
-         
     }
-
 };
 
 // TreeNode<int>* takeInputLevelWise(){
@@ -74,35 +75,33 @@ class TreeNode{
 //     return root;
 
 // }
-TreeNode<int>* takeInputLevelWise(){
+TreeNode<int> *takeInputLevelWise()
+{
     int rootData;
-    cout<<"Enter root data"<<endl;
-    cin>>rootData;
-    TreeNode<int>* root = new TreeNode<int>(rootData);
-    queue<TreeNode<int>*> pendingNodes;
+    cout << "Enter root data" << endl;
+    cin >> rootData;
+    TreeNode<int> *root = new TreeNode<int>(rootData);
+    queue<TreeNode<int> *> pendingNodes;
     pendingNodes.push(root);
-    while (pendingNodes.size()!=0)
+    while (pendingNodes.size() != 0)
     {
-        TreeNode<int>* front = pendingNodes.front();
+        TreeNode<int> *front = pendingNodes.front();
         pendingNodes.pop();
-        cout<<"Enter num of children of "<<front->data<<endl;
+        cout << "Enter num of children of " << front->data << endl;
         int numChild;
-        cin>>numChild;
+        cin >> numChild;
         for (int i = 0; i < numChild; i++)
         {
             int childData;
-            cout<<"Enter "<< i << "th child of "<<front->data<<endl;
-            cin>>childData;
-            TreeNode<int>* child = new TreeNode<int>(childData);
+            cout << "Enter " << i << "th child of " << front->data << endl;
+            cin >> childData;
+            TreeNode<int> *child = new TreeNode<int>(childData);
             front->children.push_back(child);
             pendingNodes.push(child);
         }
-        
     }
     return root;
 }
-
-
 
 // TreeNode<int>* takeInput(){
 //     int rootData;
@@ -120,21 +119,22 @@ TreeNode<int>* takeInputLevelWise(){
 //     }
 //     return root;
 // }
-TreeNode<int>* takeInput(){
+TreeNode<int> *takeInput()
+{
     int rootData;
-    cout<<"Enter data"<<endl;
-    cin>>rootData;
-    TreeNode<int>* root = new TreeNode<int>(rootData);
+    cout << "Enter data" << endl;
+    cin >> rootData;
+    TreeNode<int> *root = new TreeNode<int>(rootData);
     int n;
-    cout<<"Enter a num of children of "<<rootData<<endl;
-    cin>>n;
+    cout << "Enter a num of children of " << rootData << endl;
+    cin >> n;
     for (int i = 0; i < n; i++)
     {
-       TreeNode<int>*child  = takeInput();
-       root->children.push_back(child);
+        TreeNode<int> *child = takeInput();
+        root->children.push_back(child);
     }
-    
-   return root;
+
+    return root;
 }
 // void printTree(TreeNode<int>* root){
 //     if(root==NULL){
@@ -154,22 +154,22 @@ TreeNode<int>* takeInput(){
 
 // }
 
-void printTree(TreeNode<int>* root){
-    if(root==NULL){
+void printTree(TreeNode<int> *root)
+{
+    if (root == NULL)
+    {
         return;
     }
-    cout<<root->data<<":";
+    cout << root->data << ":";
     for (int i = 0; i < root->children.size(); i++)
     {
-        cout<<root->children[i]->data<<",";
+        cout << root->children[i]->data << ",";
     }
-    cout<<endl;
-    for (int i = 0; i <root->children.size(); i++)
+    cout << endl;
+    for (int i = 0; i < root->children.size(); i++)
     {
-      printTree(root->children[i]);
+        printTree(root->children[i]);
     }
-    
-    
 }
 // void printAtLevelK(TreeNode<int>* root ,  int k){
 //     if (root == NULL)
@@ -189,22 +189,20 @@ void printTree(TreeNode<int>* root){
 
 // }
 
-void printAtLevelK(TreeNode<int>* root , int k){
-    if (root==NULL)
+void printAtLevelK(TreeNode<int> *root, int k)
+{
+    if (root == NULL)
     {
         return;
     }
-    if (k==0)
+    if (k == 0)
     {
-        cout<<root->data<<endl;
+        cout << root->data << endl;
     }
     for (int i = 0; i < root->children.size(); i++)
     {
-        printAtLevelK(root->children[i] , k-1);
+        printAtLevelK(root->children[i], k - 1);
     }
-    
-    
-    
 }
 // int numNodes(TreeNode<int>* root){
 //     if (root == NULL)
@@ -219,19 +217,18 @@ void printAtLevelK(TreeNode<int>* root , int k){
 //     return ans;
 
 // }
-int numNodes(TreeNode<int>* root){
-   if (root==NULL)
-   {
-      return 0;
-   }
-   int ans = 1;
-   for (int i = 0; i < root->children.size(); i++)
-   {
-      ans += numNodes(root->children[i]);
-   }
-   return ans;
-   
-   
+int numNodes(TreeNode<int> *root)
+{
+    if (root == NULL)
+    {
+        return 0;
+    }
+    int ans = 1;
+    for (int i = 0; i < root->children.size(); i++)
+    {
+        ans += numNodes(root->children[i]);
+    }
+    return ans;
 }
 // void preorder(TreeNode<int>* root){
 //     if (root == NULL)
@@ -246,16 +243,17 @@ int numNodes(TreeNode<int>* root){
 //       }
 
 // }
-void preorder(TreeNode<int>* root){
-    if(root==NULL){
+void preorder(TreeNode<int> *root)
+{
+    if (root == NULL)
+    {
         return;
     }
-    cout<<root->data<<" ";
+    cout << root->data << " ";
     for (int i = 0; i < root->children.size(); i++)
     {
         preorder(root->children[i]);
     }
-    
 }
 
 // void deleteTree(TreeNode<int>* root){
@@ -266,16 +264,14 @@ void preorder(TreeNode<int>* root){
 //    delete (root);
 // }
 
-void deleteTree(TreeNode<int>* root){
+void deleteTree(TreeNode<int> *root)
+{
     for (int i = 0; i < root->children.size(); i++)
     {
         deleteTree(root->children[i]);
     }
-    delete(root);
-    
+    delete (root);
 }
-// 1 3 2  3 4 2 5 6 2 7 8 0 0 0 0 1 9 0
-
 
 int main()
 {
@@ -298,10 +294,5 @@ int main()
     return 0;
 }
 
-
-
-
-
-
-
+// Input: // 1 3 2  3 4 2 5 6 2 7 8 0 0 0 0 1 9 0
 
