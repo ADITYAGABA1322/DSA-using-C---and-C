@@ -32995,3 +32995,20 @@ private:
 #pragma GCC optimize("Ofast","inline","fast-math","unroll-loops","no-stack-protector")
 #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,tune=native","f16c")
 static const auto fast = []() {ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0); return 0; } ();
+
+// recursion  steps
+
+step 1 -> Read the questions carefully.
+
+step 2-> Identify the subproblem of the major problem and if and the process , method , funtion , block of code that is help to solve the subproblem and eventually  bigger problem.
+
+step 3-> confirm that is as recusrive solution for the given recursive problem
+
+step 4-> Identify the recursive equation
+
+step 5->Identify the parameters that your are passing through the recursive function and also the way you are passing them
+to decide on a return value of the function  
+a-> if solution require printing  return typr value void
+b-> if  a value needs to be returned then return data type according to the problem also make sure you are using the previous subsoltuion by caching the data (soltuion of the sub prob;em) and combining them efficiently to calculate a bigger Solution
+
+step 7 -> chcek if subsolution can be combined in a better fashion to give a decrease time comlexity and check for and extra data structure or memory variables  whose use can be avoidant to make the solution more memory efficiently
