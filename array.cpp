@@ -968,7 +968,7 @@
 
 //     cout << arr[i] << " ";
 //   }
- 
+
 //   return 0;
 // }
 
@@ -981,7 +981,6 @@
 //   int a,b,c,d;
 //   cin>>a>>b>>c>>d;
 //   int arr[4] = {a,b,c,d};
-
 
 //   sort(arr,arr+4);
 //   int max = 0;
@@ -1118,28 +1117,30 @@
 //   return 0;
 // }
 
-
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main(){
-  int a , b , c ,d;
-  cin>>a>>b>>c>>d;
-  if(a<0||b<0||c<0||d<0) {
-    cout<<"Negative values are not valid for representing time in a 24-hour clock."<<endl;
+int main()
+{
+  int a, b, c, d;
+  cin >> a >> b >> c >> d;
+  if (a < 0 || b < 0 || c < 0 || d < 0)
+  {
+    cout << "Negative values are not valid for representing time in a 24-hour clock." << endl;
     return 1;
   }
-  int arr[] = {a , b ,c ,d};
+  int arr[] = {a, b, c, d};
   int maxTime = -1;
-  sort(arr , arr+4);
+  sort(arr, arr + 4);
   do
   {
-    int h1 = arr[0]*10 + arr[1];
-    int m1 = arr[2]*10 + arr[3];
-    if(h1<24 && m1<60){
-      maxTime = max(maxTime , h1*60+m1);
+    int h1 = arr[0] * 10 + arr[1];
+    int m1 = arr[2] * 10 + arr[3];
+    if (h1 < 24 && m1 < 60)
+    {
+      maxTime = max(maxTime, h1 * 60 + m1);
     }
-  } while (next_permutation(arr , arr+4));
+  } while (next_permutation(arr, arr + 4));
   if (maxTime == -1)
   {
     cout << "NOT POSSIBLE" << endl;
