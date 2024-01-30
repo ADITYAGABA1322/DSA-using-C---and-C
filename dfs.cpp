@@ -53,13 +53,13 @@
 #include <iostream>
 #include <stack>
 using namespace std;
-int cost[10][10], i, j, k, n, stk[10],  top, v, vistit[10], visited[10];
+int cost[10][10], i, j, k, n, stk[10], top, v, vistit[10], visited[10];
 int main()
 {
     int m;
     cout << "enter no of vertices: ";
     cin >> n;
-    cout << "ente no of edges: ";
+    cout << "enter no of edges: ";
     cin >> m;
     cout << "\nEDGES: \n";
     for (k = 1; k <= m; k++)
@@ -76,13 +76,12 @@ int main()
     k = 1;
     while (k < n)
     {
-        for (j = n;  j >= 1; j--)
+        for (j = n; j >= 1; j--)
             if (cost[v][j] != 0 && visited[j] != 1 && vistit[j] != 1)
             {
                 vistit[j] = 1;
                 stk[top] = j;
                 top++;
-
             }
         v = stk[--top];
         cout << " " << v << " ";
@@ -91,3 +90,17 @@ int main()
         visited[v] = 1;
     }
 }
+
+
+// enter no of vertices: 5
+// enter no of edges: 5
+
+// EDGES:
+// 1 2
+// 1 3
+// 2 4
+// 3 5
+// 4 5
+// enter initial vertex: 1
+// Visitied vertices:
+// 1 2 4 5 3

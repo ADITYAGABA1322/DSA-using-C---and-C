@@ -21,28 +21,26 @@ using namespace std;
 //         }
 //     }
 // }
-void print(int **edges , int n ,int sv , bool *visited){
-    cout<<sv<<endl;
+void print(int **edges, int n, int sv, bool *visited)
+{
+    cout << sv << endl;
     visited[sv] = true;
     for (int i = 0; i < n; i++)
     {
-        if(i==sv){
+        if (i == sv)
+        {
             continue;
         }
         if (edges[i][sv] == 1)
         {
-            if(visited[i]){
+            if (visited[i])
+            {
                 continue;
             }
-            print(edges , n , i , visited);
+            print(edges, n, i, visited);
         }
-        
     }
-    
 }
-
-
-
 
 void printBFS(int **edges, int n, int sv)
 {
@@ -102,7 +100,7 @@ int main()
     }
     cout << "DFS" << endl;
     print(edges, n, 0, visited);
-    
+
     cout << "BFS" << endl;
     printBFS(edges, n, 0);
     // Delete all the memory
@@ -122,15 +120,15 @@ int main()
 // 2 1
 // 1 3
 
-//Input
-// 8
-// 9
-// 0 4
-// 0 5
-// 4 3
-// 3 2
-// 2 1
-// 1 3
-// 5 6
-// 3 6 
-// 6 7
+// Input
+//  8
+//  9
+//  0 4
+//  0 5
+//  4 3
+//  3 2
+//  2 1
+//  1 3
+//  5 6
+//  3 6
+//  6 7
