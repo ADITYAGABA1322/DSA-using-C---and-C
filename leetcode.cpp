@@ -33012,3 +33012,5 @@ a-> if solution require printing  return typr value void
 b-> if  a value needs to be returned then return data type according to the problem also make sure you are using the previous subsoltuion by caching the data (soltuion of the sub prob;em) and combining them efficiently to calculate a bigger Solution
 
 step 7 -> chcek if subsolution can be combined in a better fashion to give a decrease time comlexity and check for and extra data structure or memory variables  whose use can be avoidant to make the solution more memory efficiently
+
+
