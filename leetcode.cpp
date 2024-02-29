@@ -33014,3 +33014,7 @@ b-> if  a value needs to be returned then return data type according to the prob
 step 7 -> chcek if subsolution can be combined in a better fashion to give a decrease time comlexity and check for and extra data structure or memory variables  whose use can be avoidant to make the solution more memory efficiently
 
 
+
+Input: [1,2,3,4,[5,6,[7,[8]]]] -> [1 , 2 , 3 , 4 [[[]]]] -> solve this problem using stack 
+Output: [1,2,3,4,5,6,7,8] 
+
