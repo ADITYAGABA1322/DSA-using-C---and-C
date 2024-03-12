@@ -1,5 +1,6 @@
 #include <iostream>
 #include <queue>
+
 using namespace std;
 // template<typename T>
 // class BinaryTreeNode
@@ -234,6 +235,10 @@ void printBetweenK1K2(BinaryTreeNode<int> *root, int k1, int k2)
         printBetweenK1K2(root->right, k1, k2);
     }
 }
+
+
+// check for bst 
+
 int maximum(BinaryTreeNode<int> *root)
 {
     if (root == NULL)
@@ -250,6 +255,7 @@ int minimum(BinaryTreeNode<int> *root)
     }
     return min(root->data, min(minimum(root->left), minimum(root->right)));
 }
+
 
 bool isBST(BinaryTreeNode<int> *root)
 {
