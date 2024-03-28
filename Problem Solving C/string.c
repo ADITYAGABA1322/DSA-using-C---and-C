@@ -366,12 +366,13 @@
 
 // #include<stdio.h>
 // #include<string.h>
+
 // int main(){
 //     char str[100] , reverse[100];
 //     int len, i, index, wordStart, wordEnd;
 
 //     printf("Enter any string: ");
-//     gets(str);
+//     scanf("%[^\n]", str);
 
 //     len   = strlen(str);
 
@@ -690,48 +691,48 @@
 //     return 0;
 // }
 
-#include <stdio.h>
-#include <string.h>
-// #include<malloc.h>
+// #include <stdio.h>
+// #include <string.h>
+// // #include<malloc.h>
 
 
 
 
-int main(){
-    int n;
-    scanf("%d" , &n);
-    int i , j;
-    char s[100][100];
-    for (i = 0; i < n; i++)
-    {
-        scanf("%s" , s[i]);
-    }
-   for (i = 0; i < n; i++)
-        {
-            char c1=s[i][0];
+// int main(){
+//     int n;
+//     scanf("%d" , &n);
+//     int i , j;
+//     char s[100][100];
+//     for (i = 0; i < n; i++)
+//     {
+//         scanf("%s" , s[i]);
+//     }
+//    for (i = 0; i < n; i++)
+//         {
+//             char c1=s[i][0];
             
             
             
-            for (j = i+1; j < n; j++)
-            {
-                char c2=s[j][0];
+//             for (j = i+1; j < n; j++)
+//             {
+//                 char c2=s[j][0];
             
                 
-                if (c1 > c2)
-                {
-                    char temp [100];
-                    strcpy(temp,s[i]);
-                    strcpy(s[i],s[j]);
-                     strcpy(s[j],temp);
-                }
+//                 if (c1 > c2)
+//                 {
+//                     char temp [100];
+//                     strcpy(temp,s[i]);
+//                     strcpy(s[i],s[j]);
+//                      strcpy(s[j],temp);
+//                 }
                 
-            }
+//             }
             
-        }
-        printf("The sorted array of strings is: ");
-        for(i=0;i<n;i++){
-            printf("\n%s" , s[i]);
-        }
+//         }
+//         printf("The sorted array of strings is: ");
+//         for(i=0;i<n;i++){
+//             printf("\n%s" , s[i]);
+//         }
       
     
-}
+// }
