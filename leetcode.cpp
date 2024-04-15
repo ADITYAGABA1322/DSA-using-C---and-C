@@ -32636,7 +32636,7 @@ public:
             }
             return;
         }
-        //
+        
         index_t tmpIdx = this->getNodeIndexOfElem_(i - 1);
         if (this->isLeftChild_(tmpIdx)) {
             i = this->parentIndex_(tmpIdx);
