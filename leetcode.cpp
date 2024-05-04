@@ -32527,7 +32527,7 @@ public:
                         }
                     }
                 }
-                // update TreeNode.xMax
+                // update TreeNode.xMax 
                 if (!isUpdateMaxDone) {
                     if (m_arrNode[parentIdx].xMax == elemIdx) {
                         if (!hasFoundOldValAlternative) {
