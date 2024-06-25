@@ -33018,3 +33018,6 @@ step 7 -> chcek if subsolution can be combined in a better fashion to give a dec
 Input: [1,2,3,4,[5,6,[7,[8]]]] -> [1 , 2 , 3 , 4 [[[]]]] -> solve this problem using stack 
 Output: [1,2,3,4,5,6,7,8] 
 
+
+
+
