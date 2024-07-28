@@ -31089,6 +31089,7 @@ class Solution {
         }
         return dp[n-1]; // return the dp[n-1]
     }
+    
 }
 
 943. Find the Shortest Superstring in c++
